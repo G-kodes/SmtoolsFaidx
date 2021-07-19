@@ -12,11 +12,4 @@ log = snakemake.log_fmt_shell(stdout=True, stderr=True)
 extra = snakemake.params.get("extra", "")
 preloader = snakemake.params.get("preloader", "")
 
-shell(
-    "{preloader} "
-    "samtools "
-    "faidx "
-    "{extra} "
-    "{snakemake.input} "
-    "> {snakemake.output}"
-)
+shell("{preloader} samtools faidx {extra} {snakemake.input} > {snakemake.output}")
