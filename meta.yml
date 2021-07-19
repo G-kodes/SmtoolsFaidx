@@ -1,0 +1,12 @@
+name: SAmtoolsFaidx
+description: An implementation of the samtools FAIDX generator
+url: http://www.htslib.org/doc/samtools-faidx.html
+authors:
+  - Graeme Ford
+input:
+  - BGZipped FASTA format file
+output:
+  - >
+    an index for the provided FASTA file
+params:
+  extra: >
